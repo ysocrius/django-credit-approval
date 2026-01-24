@@ -124,8 +124,9 @@ jobs:
         echo "CELERY_RESULT_BACKEND=redis://redis:6379/0" >> .env
         echo "REDIS_URL=redis://redis:6379/0" >> .env
         docker compose up -d
-        sleep 10
+        sleep 20
         docker compose ps
+        docker compose logs web
         docker compose down
 
   security-check:
