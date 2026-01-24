@@ -10,6 +10,7 @@ env:
   POSTGRES_DB: test_credit_db
   POSTGRES_USER: test_user
   POSTGRES_PASSWORD: test_password
+  POSTGRES_HOST: localhost
   DATABASE_URL: postgresql://test_user:test_password@localhost:5432/test_credit_db
   SECRET_KEY: django-insecure-test-key-for-ci
   DEBUG: True
