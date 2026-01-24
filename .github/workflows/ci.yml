@@ -119,6 +119,10 @@ jobs:
         echo "POSTGRES_PASSWORD=test_pass" >> .env
         echo "SECRET_KEY=test-secret-key" >> .env
         echo "DEBUG=True" >> .env
+        echo "POSTGRES_HOST=db" >> .env
+        echo "CELERY_BROKER_URL=redis://redis:6379/0" >> .env
+        echo "CELERY_RESULT_BACKEND=redis://redis:6379/0" >> .env
+        echo "REDIS_URL=redis://redis:6379/0" >> .env
         docker compose up -d
         sleep 10
         docker compose ps
